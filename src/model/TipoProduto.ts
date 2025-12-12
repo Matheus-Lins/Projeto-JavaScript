@@ -1,11 +1,11 @@
 import { Produto } from "./Produto";
 
-export class Hardware extends Produto {
+export class TipoProduto extends Produto {
 
-    private _categoria: string;
+    private _categoria: number;
 
     constructor(id: number, nome: string, preco: number, 
-        estoque: number, categoria: string) {
+        estoque: number, categoria: number) {
         super(id, nome, preco, estoque);
         this._categoria = categoria;
     }
@@ -13,7 +13,7 @@ export class Hardware extends Produto {
     public get categoria() {
         return this._categoria;
     }
-    public set categoria(categoria: string) {
+    public set categoria(categoria: number) {
         this._categoria = categoria;
 
     }
